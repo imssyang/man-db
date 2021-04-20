@@ -1,0 +1,12 @@
+
+```
+apt source man-db  下载源码
+apt install groff libpipeline-dev   安装依赖
+
+vim man-db-2.8.5/include/manconfig.h.in
+    #define MAXDIRS 512     将默认128改大为512，以解决报错manpath list too long问题。
+
+./configure --prefix=/opt/man-db --sysconfdir=/opt/man-db/conf 
+```
+
+
